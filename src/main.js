@@ -9,6 +9,7 @@ import './assets/icons/css/font-awesome.min.css'
 import Lists from './components/Lists'
 import Test from './components/Test'
 import Rock from './components/Rock'
+import AddTodo from './components/AddTodo'
 
 Vue.use(VueResource)
 Vue.use(VueRouter)
@@ -19,7 +20,8 @@ const router = new VueRouter({
   routes: [
     {path: '/', component: Test},
     {path: '/lists', component: Lists},
-    {path: '/rock', component: Rock}
+    {path: '/rock', component: Rock},
+    {path: '/addtodo', component: AddTodo}
   ]
 });
 
@@ -33,6 +35,7 @@ new Vue({
         <li><router-link to="/">My Lists</router-link></li>
         <li><router-link to="/lists">Create List</router-link></li>
         <li><router-link to="/rock">Rock</router-link></li>
+        <li><router-link to="/addtodo">AddTodo</router-link></li>
       </ul>
       <hr>
       <router-view></router-view>
